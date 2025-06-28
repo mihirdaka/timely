@@ -6,7 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		6B1673082E0F8AC800A04BA2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6B1673072E0F8AC800A04BA2 /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		6B1673072E0F8AC800A04BA2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6BA6CAE52E0F33F3001F98CC /* Timely.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timely.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -32,6 +37,7 @@
 		6BA6CADC2E0F33F3001F98CC = {
 			isa = PBXGroup;
 			children = (
+				6B1673072E0F8AC800A04BA2 /* README.md */,
 				6BA6CAE72E0F33F3001F98CC /* Timely */,
 				6BA6CAE62E0F33F3001F98CC /* Products */,
 			);
@@ -109,6 +115,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B1673082E0F8AC800A04BA2 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
