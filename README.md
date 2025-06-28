@@ -18,7 +18,11 @@ Timely is a SwiftUI-based iOS app designed for managing appointments. It feature
 
 ![Chat](https://github.com/user-attachments/assets/dd6cf40a-8732-42b6-aaee-8f4bd5ed5429)
 
+---
+### Youtube Demo
+
 https://www.youtube.com/watch?v=F6JgU5Okgz0
+
 ---
 
 ### 🚀 Features
