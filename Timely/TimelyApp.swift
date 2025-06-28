@@ -10,14 +10,20 @@ import SwiftUI
 @main
 struct TimelyApp: App {
     @StateObject var authViewModel = AuthViewModel()
-
-        var body: some Scene {
-            WindowGroup {
-                if authViewModel.isAuthenticated {
-                    ContentView()
-                } else {
-                    LoginView(viewModel: authViewModel)
-                }
+    
+    var body: some Scene {
+        WindowGroup {
+            if authViewModel.isAuthenticated {
+                HomeView()
+                    .environmentObject(authViewModel)
+                    .preferredColorScheme(.light)
+                
+            } else {
+                LoginView(viewModel: authViewModel)
+                    .preferredColorScheme(.light)
+                
             }
         }
+        
+    }
 }

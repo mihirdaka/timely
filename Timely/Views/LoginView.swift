@@ -9,18 +9,18 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State private var email = ""
+    @State private var userName = ""
     @State private var password = ""
     @State private var errorMessage: String?
     @ObservedObject var viewModel: AuthViewModel
 
     var body: some View {
         VStack(spacing: 20) {
-            Text("Welcome to Fay")
+            Text("Welcome to Timely")
                 .font(.largeTitle)
                 .bold()
             
-            TextField("Email", text: $email)
+            TextField("Username", text: $userName)
                 .textInputAutocapitalization(.never)
                 .autocorrectionDisabled()
                 .padding()
@@ -36,14 +36,26 @@ struct LoginView: View {
                 Text(errorMessage)
                     .foregroundColor(.red)
             }
-            
-            Button("Login") {
-               
+            Button(action: {
+                viewModel.login(userName: userName, password: password) { success in
+                                   if !success {
+                                       self.errorMessage = "Invalid credentials"
+                                   }
+                               }
+            }) {
+                HStack {
+                    
+                    Text("Login")
+                }
+                .frame(maxWidth: .infinity)
+                .padding(12)
+                .background(AppTheme.primaryColor)
+                .foregroundColor(.white)
+                .cornerRadius(8)
             }
-            .padding()
-            .background(Color.blue)
-            .foregroundColor(.white)
-            .cornerRadius(10)
+            .padding(.vertical, 8)
+           
+            
         }
         .padding()
     }
