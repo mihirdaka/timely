@@ -21,8 +21,8 @@ class AuthViewModel: ObservableObject {
         }
 
         let body: [String: String] = [
-            "username": "john",
-            "password": "12345"
+            "username": userName,
+            "password": password
         ]
 
         var request = URLRequest(url: url)
